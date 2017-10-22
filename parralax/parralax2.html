@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+
+body,html{
+   height:100%;
+   margin:0;
+   font:400 15px/1.8 "Lato", sans-serif;
+   color:#777;
+}
+
+
+
+.bgimg-1, .bgimg-2, .bgimg-3{
+      position: relative;
+      opacity:0.65;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat:no-repeat;
+      background-size:cover;
+}
+.bgimg-1{
+   background-image:url("cycle1.jpg");
+   min-height:100%;	
+}
+
+.bgimg-2{
+   background-image:url("camera2.jpg");
+   min-height:400px;
+}
+
+.bgimg-3{
+   background-image:url("camera1.jpg");
+   min-height:400px;
+}
+
+.caption span.border{
+	background-color:#111;
+	color:#777;
+	padding: 18px;
+	font-size: 25px;
+	letter-spacing: 10px;
+
+}
+
+h3{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font:20px "Lato",sans-serif;
+    color: #111;
+}
+
+@media only screen and (max-device-width:1024px) {
+   .bgimg-1, .bgimg-2, .bgimg-3 {
+       background-attatchment: scroll;
+   }
+}
+
+
+#div1 {
+
+   font-size:48px;
+
+}
+</style>
+</head>
+
+<!-- here is battery effect -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<body>
+
+<div style="color:#777;background-color:white;text-align:center;padding:50px 80px;text-align: justify; ">
+<h3 style="text-align: center;"> Parallax Demo </h3>
+<p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling</p>
+</div>
+
+<div class="bgimg-2"></div>
+   <div class="caption">
+      <span class="border" style="background-color:transparent; font-size: 25px;color: #f7f7f7;">LESS HEIGHT</span>
+   </div>
+</div>
+
+
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  </div>
+</div>
+
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">COOL!</span>
+  </div>
+
+  <div id="div1" class="fa"></div>
+
+
+<!-- here is battery icon -->
+  <script>
+function chargebattery() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf244;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf243;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf242;";
+    }, 2000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf241;";
+    }, 3000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf240;";
+    }, 4000);
+}
+chargebattery();
+setInterval(chargebattery, 5000);
+</script>
+
+<p>By Sovon </p>
+
+
+
+</body>
+</html>
